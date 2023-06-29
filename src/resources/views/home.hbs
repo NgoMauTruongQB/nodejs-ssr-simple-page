@@ -1,0 +1,20 @@
+<div class="mt-4">
+    <div class="row">
+        {{#each courses}}
+            <div class="col-sm-6 col-lg-4 mt-2">
+                <div class="card">
+                    <a href="/courses/{{ this.slug }}">
+                        <img src="{{ this.img }}" class="card-img-top" style="height: 200px; object-fit: cover;" alt="...">
+                    </a>
+                    <div class="card-body">
+                        <a href="/courses/{{ this.slug }}">
+                            <h5 class="card-title" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">{{ this.name }}</h5>
+                        </a>
+                        <p class="card-text" style="height: 100px;">{{ this.description }}</p>
+                        <a href="/courses/{{ this.slug }}" class="btn btn-primary">Xem lộ trình</a>
+                    </div>
+                </div>
+            </div>
+        {{/each}}
+    </div>
+</div>

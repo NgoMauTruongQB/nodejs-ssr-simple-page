@@ -1,0 +1,26 @@
+<div class="mt-2">
+    <h3>Sửa khoá học</h3>
+    <form method="POST" action="/courses/{{course._id}}?_method=PUT">
+        <div class="mb-3">
+            <label for="name" class="form-label">Tên khoá học</label>
+            <input type="text" value="{{ course.name }}" class="form-control" name="name" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <div id="emailHelp" class="form-text">Nhập vào tên khoá học.</div>
+        </div>
+        <div class="mb-3">
+            <label for="description" class="form-label">Mô tả khoá học</label>
+            <textarea class="form-control" name="description" id="exampleInputEmail1" aria-describedby="emailHelp">{{ course.description }}</textarea>
+            <div id="emailHelp" class="form-text">Nhập vào mô tả khoá học.</div>
+        </div>
+        <div class="mb-3">
+            <label for="img" class="form-label">Hình ảnh khoá học</label>
+            <input type="text" value="{{ course.img }}" class="form-control" name="img" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <div id="emailHelp" class="form-text">Nhập vào hình ảnh minh hoạ cho khoá học.</div>
+        </div>
+        <div class="mb-3">
+            <label for="videoID" class="form-label">Video ID</label>
+            <input type="text" value="{{ course.videoID }}" class="form-control" name="videoID" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <div id="emailHelp" class="form-text"></div>
+        </div>
+        <button type="submit" class="btn btn-danger">Cập nhật</button>
+    </form>
+</div>
